@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Mapty3D</title>
+    <title>Unity WebGL Player | tangramunity</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico" />
     <link rel="stylesheet" href="TemplateData/style.css" />
   </head>
@@ -61,13 +61,13 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/Build.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Build.data.unityweb",
-        frameworkUrl: buildUrl + "/Build.framework.js.unityweb",
-        codeUrl: buildUrl + "/Build.wasm.unityweb",
+        dataUrl: buildUrl + "/Build.data.gz",
+        frameworkUrl: buildUrl + "/Build.framework.js.gz",
+        codeUrl: buildUrl + "/Build.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "TeamNexus",
-        productName: "Metaphoria",
-        productVersion: "0.1",
+        companyName: "mapzen",
+        productName: "tangramunity",
+        productVersion: "1.0",
         showBanner: unityShowBanner,
       };
 
@@ -93,7 +93,7 @@
         // performance, uncomment the following line:
         // config.devicePixelRatio = 1;
 
-        // unityShowBanner("WebGL builds are not supported on mobile devices.");
+        unityShowBanner("WebGL builds are not supported on mobile devices.");
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
@@ -114,7 +114,6 @@
             fullscreenButton.onclick = () => {
               unityInstance.SetFullscreen(1);
             };
-            // unityInstance.SetFullscreen(1);
           })
           .catch((message) => {
             alert(message);
